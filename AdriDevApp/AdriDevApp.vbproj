@@ -114,6 +114,7 @@
   <ItemGroup>
     <Content Include="Index.html" />
     <Content Include="Resources\AdriLogo.jpg" />
+    <Content Include="Resources\Logo.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
