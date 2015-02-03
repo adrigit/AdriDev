@@ -112,6 +112,8 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUsArabic.html" />
+    <Content Include="AboutUsEnglish.html" />
     <Content Include="Index.html" />
     <Content Include="Resources\AdriLogo.jpg" />
     <Content Include="Resources\Logo.jpg" />
