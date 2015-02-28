@@ -125,7 +125,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Index.html" />
     <Content Include="IndexArabic.html" />
-    <Content Include="Resources\AdriLogo.jpg" />
     <Content Include="Resources\Logo.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
