@@ -23,6 +23,8 @@
     <IISExpressUseClassicPipelineMode />
     <NuGetPackageImportStamp>78adb40a</NuGetPackageImportStamp>
     <ApplicationInsightsResourceId>/subscriptions/ed02e921-74c1-4f94-a6e9-fc68dd522388/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/AdriDevApp</ApplicationInsightsResourceId>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -114,9 +116,29 @@
   <ItemGroup>
     <Content Include="AboutUsArabic.html" />
     <Content Include="AboutUsEnglish.html" />
+    <Content Include="ContactUsArabic.html" />
+    <Content Include="ContactUsEnglish.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Index.html" />
+    <Content Include="IndexArabic.html" />
     <Content Include="Resources\AdriLogo.jpg" />
     <Content Include="Resources\Logo.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +182,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -220,7 +243,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.0.12.0-build02810\build\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.0.12.0-build02810\build\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.props'))" />
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
